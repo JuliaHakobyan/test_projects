@@ -8,10 +8,6 @@ with Chrome() as driver:
     title = driver.title
     print(title)
     print(url)
-    print(url)
-    print(url)
-    print(url)
-    print(url)
 
     assert 'The Internet' in driver.title
     login_field = driver.find_element_by_id("username")
