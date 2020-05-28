@@ -25,7 +25,7 @@ with Chrome() as driver:
     time.sleep(10)
     previous_dress = driver.find_element_by_xpath("//*[@id='center_column']/ul/li[6]/div/div[2]/h5/a").text
     print(previous_dress)
-    #time.sleep(10)
+    time.sleep(10)
     #next_dress = driver.find_element_by_xpath("//*[@id=center_column]/ul/li[7]/div/div[1]/div/a[1]/img")
     #next_dress = driver.find_element_by_xpath("//*[@id=center_column]/ul/li[7]/div/div[1]/div/a[1]/img").getText("text")
 
