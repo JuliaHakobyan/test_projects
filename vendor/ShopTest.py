@@ -18,21 +18,13 @@ with Chrome() as driver:
     departments = driver.find_element_by_id("block_top_menu")
     #time.sleep(10)
     women_department = driver.find_element_by_class_name("sf-with-ul").click()
-    #time.sleep(10)
-    #product_list = driver.find_elements_by_class_name("product_list grid row")
-    #time.sleep(10)
+    time.sleep(5)
     ActionChains(driver).move_to_element(driver.find_element_by_xpath("//*[@id='center_column']/ul/li[6]")).perform()
-    time.sleep(10)
+    time.sleep(5)
     previous_dress = driver.find_element_by_xpath("//*[@id='center_column']/ul/li[6]/div/div[2]/h5/a").text
     print(previous_dress)
-    time.sleep(10)
-    #next_dress = driver.find_element_by_xpath("//*[@id=center_column]/ul/li[7]/div/div[1]/div/a[1]/img")
-    #next_dress = driver.find_element_by_xpath("//*[@id=center_column]/ul/li[7]/div/div[1]/div/a[1]/img").getText("text")
-
-
-
-
-    #login_field = driver.find_element_by_id("username")
-    #login_field.send_keys("tomsmith")
-    #password_field = driver.find_element_by_id("password")
-    #password_field.send_keys("SuperSecretPassword!" + Keys.ENTER)
+    ActionChains(driver).move_to_element(driver.find_element_by_xpath("//*[@id='center_column']/ul/li[7]")).perform()
+    time.sleep(5)
+    next_dress = driver.find_element_by_xpath("//*[@id='center_column']/ul/li[7]/div/div[2]/h5/a").text
+    print(next_dress)
+    time.sleep(5)
