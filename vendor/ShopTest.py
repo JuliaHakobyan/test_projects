@@ -5,7 +5,6 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
 driver = Chrome()
 
-
 with Chrome() as driver:
     driver.get("http://automationpractice.com/index.php")
     driver.maximize_window()
@@ -43,8 +42,9 @@ with Chrome() as driver:
     first_dress_checkout = driver.find_element_by_xpath("//*[@id='center_column']/p[2]/a[1]/span").click()
     ActionChains(driver).move_to_element(driver.find_element_by_xpath("//*[@id='create-account_form']")).perform()
     time.sleep(3)
-    user_sign_up = driver.find_element_by_xpath("//*[@id='SubmitCreate']/span").click()
+
     email_address = driver.find_element_by_id("email_create")
     email_address.clear()
     email_address.send_keys("hakobyan.julieta@yahoo.com")
+    user_sign_up = driver.find_element_by_xpath("//*[@id='SubmitCreate']/span").click()
     time.sleep(3)
