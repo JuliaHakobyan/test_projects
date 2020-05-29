@@ -24,10 +24,10 @@ with Chrome() as driver:
     time.sleep(2)
     try_yourself = driver.find_element_by_xpath('//a[@href="'+"trypython.asp?filename=demo_helloworld"+'"]').click()
     time.sleep(5)
-    text = driver.find_element_by_xpath("/html/body/div[4]/div[3]/div/div/div/div[6]/div[1]/div/div/div/div[5]/pre[2]/span")
-    text.clear()
+    #text = driver.find_element_by_xpath("/html/body/div[4]/div[3]/div/div/div/div[6]/div[1]/div/div/div/div[5]/pre[2]/span")
+    #text.clear()
     #time.sleep(5)
-
-    #ActionChains(driver).move_to_element(driver.find_element_by_css_selector("#mySidenav > div > a:nth-child(26)")).perform()
+    #click_button = driver.find_element_by_xpath("/html/body/div[2]/div/button[2]").click()
     #time.sleep(3)
-    #driver.find_element_by_
+    click_button = driver.find_element_by_css_selector("body > div.trytopnav > div > button.w3 - button.w3 - bar - item.w3 - green.w3 - hover - white.w3 - hover - text - green")
+    time.sleep(3)
