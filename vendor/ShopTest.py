@@ -48,3 +48,7 @@ with Chrome() as driver:
     email_address.send_keys("hakobyan.julieta@yahoo.com")
     user_sign_up = driver.find_element_by_xpath("//*[@id='SubmitCreate']/span").click()
     time.sleep(3)
+
+
+
+
