@@ -1,8 +1,9 @@
 import pytest
 import os
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
+
+
 
 class TestLogin():
     @pytest.fixture
@@ -10,7 +11,7 @@ class TestLogin():
         _chromedriver = os.path.join(os.getcwd(), 'vendor', 'chromedriver')
         if os.path.isfile(_chromedriver):
             _service = ChromeService(executable_path=_chromedriver)
-            driver_ = webdriver.Chrome(service=_service)
+            driver_ = webdriver.Chrome()
         else:
             driver_ = webdriver.Chrome()
         def quit():
