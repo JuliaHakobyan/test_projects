@@ -18,7 +18,7 @@ class BasePage():
     def type(self, locator, input_text):
         self.find(locator).send_keys(input_text)
 
-    def is_displayed(self, locator, tomeout=0):
+    def is_displayed(self, locator, tomeout=0, webDriverWait=None):
         if tomeout > 0:
             try:
                 wait = webDriverWait(self.driver, tomeout)
