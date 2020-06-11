@@ -29,13 +29,3 @@ class TestLogin():
 
         driver.logout()
         assert (driver.logout_success_message_present())
-
-
-
-    #def test_succes_login(self, login):
-        #login.with_("tomsmith", "SuperSecretPassword!")
-        #assert (login.valid())
-
-    #def test_invalid_login(self, login):
-        #login.with_("", "")
-        #assert (login.invalid())
