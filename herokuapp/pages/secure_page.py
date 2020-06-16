@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from herokuapp.pages.login_page import LoginPage
+from new_project.herokuapp.pages.login_page import LoginPage
 
 class SecurePage(LoginPage):
     secure_area_title = {"by": By.CLASS_NAME, "value": "icon-lock"}
@@ -7,8 +7,6 @@ class SecurePage(LoginPage):
     logout_button = {"by": By.XPATH, "value": "//a[@class='button secondary radius']"}
     login_success_message = {"by": By.CSS_SELECTOR, "value": ".flash.success"}
     login_success_message_close = {"by": By.XPATH, "value": "//a[@class='close']"}
-
-       # "//a[@class='close']"
 
     def __init__(self, driver):
         super().__init__(driver)

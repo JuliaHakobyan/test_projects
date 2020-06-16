@@ -2,7 +2,7 @@ import pytest
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
-from herokuapp.pages.secure_page import SecurePage
+from new_project.herokuapp.pages.secure_page import SecurePage
 
 class TestLogin():
     @pytest.fixture
@@ -19,10 +19,10 @@ class TestLogin():
         request.addfinalizer(quit)
         return SecurePage(driver_)
 
+
     def test_succes_login_logout(self, driver):
         driver.with_("tomsmith", "SuperSecretPassword!")
         assert (driver.login_success_message_present())
-
 
         driver.close_login_message()
         driver.click(driver.login_success_message_close)
