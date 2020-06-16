@@ -16,7 +16,7 @@ class LoginPage(BasePage):
 
     #def __init__(self, driver):
         #super().__init__(driver)
-        #self.visit("http://the-internet.herokuapp.com/login")
+        #self.visit("http://the-internet.herokuapp.com/")
         #assert self.is_displayed(self.login_form)
 
     def login_form_present(self):
@@ -35,8 +35,4 @@ class LoginPage(BasePage):
 
     def close_logout_message(self):
         self.click(self.logout_success_message_close)
-
-    def visit_homepage(self, url):
-        self.driver.maximize_window()
-        self.driver.get("http://the-internet.herokuapp.com/")
 
